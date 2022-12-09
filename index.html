@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <h1>Password Generator</h1>
+  <form>
+    <label for="length">Length:</label>
+    <input type="number" id="length" value="16" min="8" max="32">
+    <br>
+    <label for="complexity">Complexity:</label>
+    <select id="complexity">
+      <option value="low">Low</option>
+      <option value="medium" selected>Medium</option>
+      <option value="high">High</option>
+    </select>
+    <br>
+    <label for="lowercase">Lowercase:</label>
+    <input type="checkbox" id="lowercase" checked>
+    <br>
+    <label for="uppercase">Uppercase:</label>
+    <input type="checkbox" id="uppercase" checked>
+    <br>
+    <label for="numbers">Numbers:</label>
+    <input type="checkbox" id="numbers" checked>
+    <br>
+    <label for="special">Special:</label>
+    <input type="checkbox" id="special" checked>
+    <br>
+    <button type="button" id="generate">Generate</button>
+    <button type="button" id="copy" disabled>Copy</button>
+    <button type="button" id="save" disabled>Save</button>
+    <br>
+    <label for="password">Password:</label>
+    <input type="text" id="password" value="" readonly>
+    <br>
+    <label for="preview">Preview:</label>
+    <input type="text" id="preview" value="" readonly>
+    <br>
+    <progress id="strength" value="0" max="100"></progress>
+    <br>
+    <label for="history">History:</label>
+    <textarea id="history" readonly></textarea>
+  </form>
+</body>
+</html>
